@@ -1,0 +1,44 @@
+
+body {
+    background-color:   #00a6ff !important;
+}
+
+
+
+.container {
+    position: relative;
+  }
+
+#user{
+    margin-left: -40%;
+    margin-top: 3%;
+    font-size: 22px;
+    color: white;
+}
+
+#viewSessionSotorage {
+    margin-left: 6%;
+    font-size: 22px;
+    margin-top: 8%;
+    color: white;
+}
+
+.tr1 {
+    background-color: aliceblue;
+}
+
+#table-data {
+    margin-top: 80px;
+    margin-left: 8.5%;
+    font-size: 20px;
+    border-color: black;
+    position: absolute;
+    top: 50%;
+    left: 42%;
+    transform: translate(-50%, -50%);
+}
+
+#limpar-filtros{
+    margin-left: 5%;
+    margin-top: 2.5%;
+}

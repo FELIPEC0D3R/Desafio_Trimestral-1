@@ -1,0 +1,229 @@
+@media (min-width: 320px ){
+   div#table-data.tabulator {
+    max-height: 600px;
+    max-width: 290px;
+   }
+
+    nav .navbar.navbar-expand-lg.navbar-dark {
+       max-width: 357.8px;
+    }
+    .nav-link{
+        font-size: 20px;
+        margin-left: 1px;
+    }
+    .imagem-laclaw{
+        width: 170px;
+        height: 95px;
+    }
+
+     #table-data{
+        margin-top: 150px;
+        margin-left: 8.5%;
+        font-size: 20px;
+        border-color: black;
+        position: absolute;
+        top: 50%;
+        left: 42%;
+        transform: translate(-50%, -50%)
+    }
+    .tabulator .tabulator-header .tabulator-col.tabulator-sortable:hover{
+        min-width: 80px;
+    }
+    
+    div.tabulator-col-title{
+        font-size: 10px;
+    }
+    
+    div.tabulator-cell {
+        font-size: 10px;
+    }
+
+    .tabulator .tabulator-header .tabulator-col{
+        min-height: 60px;
+    }
+}
+
+@media (min-width:480px){
+    div#table-data.tabulator {
+        max-height: 600px;
+        max-width: 405px;
+       }
+
+    div.tabulator-col-title{
+        font-size: 17px;
+    }
+    
+    div.tabulator-cell {
+        font-size: 12px;
+    }   
+    #limpar-filtros {
+        margin-left: 9%;
+    }
+    .imagem-laclaw{
+        width: 190px;
+        height: 95px;
+    }
+}
+@media (min-width:600px) {
+    div#table-data.tabulator {
+        max-height: 600px;
+        max-width: 455px;
+       }
+
+    div.tabulator-col-title{
+        font-size: 18px;
+    }
+    
+    div.tabulator-cell {
+        font-size: 12px;
+    }   
+    #limpar-filtros {
+        margin-left: 14%;
+    }
+    .imagem-laclaw{
+        width: 195px;
+        height: 98px;
+    }
+    #table-data{
+        margin-top: 150px;
+        margin-left: 8.5%;
+        font-size: 20px;
+        border-color: black;
+        position: absolute;
+        top: 40%;
+        left: 42%;
+        transform: translate(-50%, -50%)
+    }
+}
+@media (min-width:641px){
+    div#table-data.tabulator {
+        max-height: 600px;
+        max-width: 455px;
+       }
+
+    div.tabulator-col-title{
+        font-size: 18px;
+    }
+    
+    div.tabulator-cell {
+        font-size: 12px;
+    }   
+    #limpar-filtros {
+        margin-left: 14%;
+    }
+    .imagem-laclaw{
+        width: 195px;
+        height: 98px;
+    }
+
+}
+
+@media (min-width:801px){
+    div#table-data.tabulator {
+        max-height: 600px;
+        max-width: 670px;
+       }
+
+    div.tabulator-col-title{
+        font-size: 18px;
+    }
+    
+    div.tabulator-cell {
+        font-size: 15px;
+    }   
+    #limpar-filtros {
+        margin-left: 10%;
+    }
+    .imagem-laclaw{
+        width: 250px;
+        height: 100px;
+    }
+}
+@media (min-width:961px){
+    div#table-data.tabulator {
+        max-height: 600px;
+        max-width: 750px;
+       }
+
+    div.tabulator-col-title{
+        font-size: 18px;
+    }
+    
+    div.tabulator-cell {
+        font-size: 12px;
+    }   
+    #limpar-filtros {
+        margin-left: 14%;
+    }
+    .imagem-laclaw{
+        width: 195px;
+        height: 98px;
+    }
+    #table-data{
+        margin-top: 150px;
+        margin-left: 8.5%;
+        font-size: 20px;
+        border-color: black;
+        position: absolute;
+        top: 42%;
+        left: 42%;
+        transform: translate(-50%, -50%)
+    }
+}
+
+@media (min-width:1025px){
+    div#table-data.tabulator {
+        max-height: 600px;
+        max-width: 860px;
+       }
+
+    div.tabulator-col-title{
+        font-size: 20px;
+    }
+    
+    div.tabulator-cell {
+        font-size: 18px;
+    }   
+    #limpar-filtros {
+        width: 115px;
+        height: 33px;
+        margin-left: 10%;
+    }
+    .imagem-laclaw{
+        width: 250px;
+        height: 100px;
+    }
+    #table-data{
+        margin-top: 150px;
+        margin-left: 8.5%;
+        font-size: 20px;
+        border-color: black;
+        position: absolute;
+        top: 45%;
+        left: 42%;
+        transform: translate(-50%, -50%)
+    }
+}
+
+@media (min-width: 1281px){
+    div#table-data.tabulator {
+        max-height: 600px;
+        max-width: 1000px;
+       }
+
+    div.tabulator-col-title{
+        font-size: 20px;
+    }
+    
+    div.tabulator-cell {
+        font-size: 20px;
+    }
+    .imagem-laclaw{
+        width: 200px;
+        height: 100%;
+    }
+    .nav-link{
+        font-size: 20px;
+        margin-left: 100%;
+    }
+}
