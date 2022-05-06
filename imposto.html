@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>imposto</title>
+  <link href="https://unpkg.com/tabulator-tables/dist/css/tabulator.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://unpkg.com/tabulator-tables/dist/js/tabulator.min.js"></script>
+  <link rel="stylesheet" href="reset.css">
+  <script src="script2.js" defer></script>
+  <link rel="stylesheet" href="estilos2.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="tabulator.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+  </script>
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark p-8" style="background-color: black">
+    <img src="laclaw.svg" width="250px" height="100px" class="imagem-laclaw">
+
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="teste_login.html">Voltar</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <img src="user.png" id="user" width="40px">
+        <p id="viewSessionSotorage"></p>
+
+      </form>
+    </div>
+  </nav>
+
+  <div id="table-data" style="width: 1000px;"></div>
+  
+  <!-- <button id="limpar-filtros" onclick="LimparFiltros()">Limpar Filtros</button> -->
+
+</body>
+
+</html>
+
+<script src="data.js"></script>
+<script>
+
+  var table = new Tabulator("#table-data", {
+
+    height: 600, // set height of table (in CSS or here), this enables the Virtual DOM and improves render speed dramatically (can be any valid css height value)
+    data: data, //assign data to table
+    layout: "fitColumns", //fit columns to width of table (optional)
+    selectable: 1,
+    columns: [ //Define Table Columns
+      { title: "NCM", field: "NCM", width: 120, headerFilter: "input", headerFilterParams: { values: true } },
+      { title: "Descrição", field: "DESCR_NCM", hozAlign: "left", headerFilter: "input", headerFilterParams: { values: true } },
+      { title: "Alíquota", field: "ALIQ_IPI", hozAlign: "left" },
+
+    ],
+  });
+
+  // table.on("rowClick", function (e, row) {
+  //   var linha = row.getData();
+  //   alert(linha.Codigo);
+  // });
+  table.on("rowClick", function (e, row) {
+    var linha = row.getData();
+	table.clearFilter(true); // esse caboclo que limpa os filtros. 
+	table.setFilter(customFilter, {ncm:linha.Codigo});
+  });
+  
+function customFilter(data, filterParams){
+    //data - the data for the row being filtered
+    //filterParams - params object passed to the filter
+	
+	var ncmClicadoSemPontos = filterParams.ncm.replaceAll('.', '');
+	var ncmLinhaSendoFiltradaSemPontos = data.Codigo.replaceAll('.', '');
+
+    return ncmClicadoSemPontos.startsWith(ncmLinhaSendoFiltradaSemPontos);
+}
+function LimparFiltros(){
+  table.clearFilter(true);
+}
+</script>
